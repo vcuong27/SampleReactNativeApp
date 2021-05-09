@@ -1,4 +1,4 @@
-package com.samplereactnativeapp;
+package com.nvc.samplereactnativeapp;
 
 import com.facebook.react.ReactActivity;
 
