@@ -1,4 +1,4 @@
-package com.nvc.samplereactnativeapp;
+package com.gameloft.android.fb.gloftlefb;
 
 import com.facebook.react.ReactActivity;
 

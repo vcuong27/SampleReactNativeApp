@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.nvc.samplereactnativeapp">
+  package="com.gameloft.android.fb.gloftlefb">
 
     <uses-permission android:name="android.permission.INTERNET" />
 

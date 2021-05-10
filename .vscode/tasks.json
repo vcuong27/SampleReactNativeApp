@@ -28,6 +28,17 @@
         }
       },
       {
+        "label": "Clean Android",
+        "group": "build",
+        "type": "shell",
+        "windows": {
+          "command": "cd android; if($?) {./gradlew clean}"
+        },
+        "linux": {
+          "command": "cd android && ./gradlew clean"
+        }
+      },
+      {
         "label": "Generate Android Bundle",
         "group": "build",
         "type": "shell",
