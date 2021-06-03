@@ -6,6 +6,28 @@
     },
     "tasks": [
       {
+        "label": "Config Module",
+        "group": "build",
+        "type": "shell",
+        "windows": {
+          "command": "yarn install"
+        },
+        "linux": {
+          "command": "yarn install"
+        }
+      },
+      {
+        "label": "Clean Android build",
+        "group": "build",
+        "type": "shell",
+        "windows": {
+          "command": "cd android; if($?) {./gradlew clean}"
+        },
+        "linux": {
+          "command": "cd android && ./gradlew clean"
+        }
+      },
+      {
         "label": "Build APK Debug",
         "group": "build",
         "type": "shell",
