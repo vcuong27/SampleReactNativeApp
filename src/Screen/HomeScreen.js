@@ -2,6 +2,8 @@ import * as React from 'react';
 import { Button, View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import {NativeModules} from 'react-native';
+const {GamingLoginModule} = NativeModules;
 
 
 export default function HomeScreen({ navigation }) {
@@ -12,6 +14,12 @@ export default function HomeScreen({ navigation }) {
         title="Go to Details"
         onPress={() => navigation.navigate('Details')}
       />
+
+      <Button
+        title="Login"
+        onPress={() => GamingLoginModule.Login()}
+      />
+
     </View>
   );
 }

@@ -198,6 +198,11 @@ dependencies {
 
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
 
+    implementation files('../app/libs/facebook-gamingservices-release.aar')
+    implementation files('../app/libs/facebook-common-release.aar')
+    implementation files('../app/libs/facebook-core-release.aar')
+    implementation files('../app/libs/facebook-share-release.aar')
+	
     debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}") {
       exclude group:'com.facebook.fbjni'
     }
