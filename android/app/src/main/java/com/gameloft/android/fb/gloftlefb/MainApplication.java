@@ -2,6 +2,8 @@ package com.gameloft.android.fb.gloftlefb;
 
 import android.app.Application;
 import android.content.Context;
+
+import com.facebook.FacebookSdk;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
 import com.facebook.react.ReactInstanceManager;
@@ -45,6 +47,9 @@ public class MainApplication extends Application implements ReactApplication {
   public void onCreate() {
     super.onCreate();
     SoLoader.init(this, /* native exopackage */ false);
+    FacebookSdk.setAutoInitEnabled(true);
+    FacebookSdk.setAutoLogAppEventsEnabled(true);
+    FacebookSdk.sdkInitialize(getApplicationContext());
     initializeFlipper(this, getReactNativeHost().getReactInstanceManager());
   }
 

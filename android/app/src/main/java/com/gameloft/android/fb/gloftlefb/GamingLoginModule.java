@@ -1,7 +1,6 @@
 package com.gameloft.android.fb.gloftlefb;
 
 import android.util.Log;
-import android.widget.Toast;
 
 import com.facebook.AccessToken;
 import com.facebook.FacebookSdk;
@@ -26,15 +25,11 @@ public class GamingLoginModule extends ReactContextBaseJavaModule {
     public void Login(Callback successCallBack, Callback failCallBack) {
         Log.d("GamingLoginModule", "Login");
         try {
-            FacebookSdk.setAutoInitEnabled(true);
-            FacebookSdk.setAutoLogAppEventsEnabled(true);
-            FacebookSdk.sdkInitialize(getReactApplicationContext());
             FacebookSdk.fullyInitialize();
             CloudGameLoginHandler.init(getReactApplicationContext());
-            Toast.makeText(getReactApplicationContext(), "GamingLoginModule Login", Toast.LENGTH_LONG).show();
             successCallBack.invoke("Login success");
         } catch (Exception ex) {
-            failCallBack.invoke("Fail to Login");
+            failCallBack.invoke("Login Fail: " + ex.getMessage());
         }
     }
 
