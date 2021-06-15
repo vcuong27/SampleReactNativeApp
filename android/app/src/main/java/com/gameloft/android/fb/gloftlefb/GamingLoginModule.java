@@ -38,7 +38,7 @@ public class GamingLoginModule extends ReactContextBaseJavaModule {
         }
     }
 
-
+    @ReactMethod
     public void getAccessToken(Callback successCallBack, Callback failCallBack) {
         Log.d("GamingLoginModule", "getAccessToken");
         try {
