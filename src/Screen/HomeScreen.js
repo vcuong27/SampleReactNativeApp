@@ -24,9 +24,8 @@ export default function HomeScreen({ navigation }) {
           (failLogin) => {
             console.log(failLogin);
           }
-        ))}
+        )}
       />
-
       <Button
         title="Get Access token"
         onPress={() => GamingLoginModule.getAccessToken(
@@ -37,9 +36,9 @@ export default function HomeScreen({ navigation }) {
           (errorMessage) => {
             //error 
             console.log(errorMessage);
-          })}
+          }
+        )}
       />
-
     </View>
   );
 }
