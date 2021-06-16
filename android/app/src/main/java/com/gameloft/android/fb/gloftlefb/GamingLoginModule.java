@@ -12,6 +12,7 @@ import com.facebook.react.bridge.ReactMethod;
 
 public class GamingLoginModule extends ReactContextBaseJavaModule {
 
+
     public GamingLoginModule(ReactApplicationContext context) {
         super(context);
     }
@@ -37,11 +38,11 @@ public class GamingLoginModule extends ReactContextBaseJavaModule {
     public void getAccessToken(Callback successCallBack, Callback failCallBack) {
         Log.d("GamingLoginModule", "getAccessToken");
         try {
-            AccessToken dta = AccessToken.getCurrentAccessToken();
-            successCallBack.invoke(dta.toString());
+            String at = AccessToken.getCurrentAccessToken().getToken();
 
+            successCallBack.invoke(at);
         } catch (Exception ex) {
-            failCallBack.invoke("Fail to get AccessToken");
+            failCallBack.invoke("Fail to get AccessToken : " + ex.getMessage());
         }
     }
 }
